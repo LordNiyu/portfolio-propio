@@ -55,46 +55,56 @@ html{
     cursor: pointer;
     display: none;
 }
-/* SECCION I N I C I O */
-.inicio{
-    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(img/fondo.jpg);
+:root {
+    --main-bg-color: #1e2326;
+    --accent-color: #1CB698;
+    --font-color: #fff;
+}
+
+/* SECCION INICIO */
+.inicio {
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), url(img/fondo.jpg);
     background-size: cover;
     height: 100vh;
-    color: #fff;
+    color: var(--font-color);
     display: flex;
     align-items: center;
 }
-.inicio .contenido-banner{
+
+.inicio .contenido-banner {
     padding: 20px;
-    background-color: #1e2326;
+    padding-top: 25px;
+    background-color: var(--main-bg-color);
     max-width: 350px;
     margin: auto;
     text-align: center;
     border-radius: 40px;
 }
-.inicio .contenido-banner img{
-    margin-top: 40px;
-    border: 10px solid #1CB698;
+
+.inicio .contenido-banner img {
+    margin: 40px auto 0;
+    border: 10px solid var(--accent-color);
     display: block;
     width: 80%;
-    margin: auto;
     border-radius: 100%;
 }
-.inicio .contenido-banner h1{
+
+.inicio .contenido-banner h1 {
     margin-top: 40px;
     font-size: 42px;
-    font-family: 'Righteous';
+    font-family: 'Righteous', sans-serif;
 }
-.inicio .contenido-banner h2{
+
+.inicio .contenido-banner h2 {
     font-size: 15px;
     font-weight: normal;
 }
-.inicio .contenido-banner .redes a{
-    color: #fff;
+
+.inicio .contenido-banner .redes a {
+    color: var(--font-color);
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid var(--font-color);
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -103,9 +113,11 @@ html{
     font-size: 20px;
     transition: .3s;
 }
-.inicio .contenido-banner .redes a:hover{
-    background-color: #1CB698;
+
+.inicio .contenido-banner .redes a:hover {
+    background-color: var(--accent-color);
 }
+
 .sobremi{
     background-color: #1e2326;
     color: #fff;
@@ -615,6 +627,43 @@ html{
     display: inline-block;
     margin-right: 20px;
 }
+.mapa-container {
+    position: relative; /* Establece el contexto de posicionamiento para el contenedor */
+    overflow: hidden; /* Oculta el contenido que sobresale del contenedor */
+    max-width: 100%; /* Asegura que el mapa no exceda el ancho del contenedor padre */
+}
+
+.mapa-container .info {
+    position: absolute; /* Posiciona la información de forma absoluta */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    left: 20px; /* Ajusta la distancia desde el lado izquierdo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interior */
+}
+.mapa-container {
+    position: relative; /* Establece el contexto de posicionamiento */
+    width: 100%; /* Ajusta el ancho del contenedor al 100% */
+    height: auto; /* Hace que la altura del contenedor se ajuste automáticamente */
+    margin-bottom: 20px; /* Añade un margen inferior para separar el mapa de otros elementos */
+}
+
+.mapa-container iframe {
+    width: 100%; /* Hace que el ancho del mapa se ajuste al 100% del contenedor */
+    height: 300px; /* Establece una altura predeterminada para el mapa */
+}
+
+.mapa-container .info {
+    position: absolute; /* Posiciona la información encima del mapa */
+    bottom: 0; /* Ajusta la posición de la información a la parte inferior del contenedor */
+    left: 0; /* Ajusta la posición de la información a la izquierda del contenedor */
+    width: 100%; /* Ajusta el ancho de la información al 100% del contenedor */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interior */
+    box-sizing: border-box; /* Incluye el padding en el ancho total del contenedor */
+}
+
 footer{
     background-color: #252A2E;
     color: #fff;
